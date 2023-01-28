@@ -1,0 +1,11 @@
+{
+    'data_dir': 'data',
+    'train_frac': 0.5,
+    'save_path': 'saved_model/model.pt',
+    'scaler_path': 'model/scaler.gz',
+    'label_name': 'Close',
+    'sequence_length': 4,
+    'batch_size': 8,
+    'n_epochs': 20,
+    'n_epochs_stop': 5,
+}
