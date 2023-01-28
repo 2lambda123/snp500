@@ -55,7 +55,7 @@ I will use the traditional model, LSTM to handle our time series data.
 
 Since we have multiple stocks data, combining them together is a bit tricky. We can not concatenate one to the bottom of the other one because they are not continuous values of the same stock. We'll just keep them as a list of time series and handle them carefully in `__get_item__` method.
 
-After splitting data into training set and test set, we need to rescale them so that they lie on [0, 1] interval. This is done by `MinMaxScaler` of (scikit-learn)[https://scikit-learn.org/]. I fit that scaler on training set and save it to `model/scaler.gz` for applying on test set later.
+After splitting data into training set and test set, we need to rescale them so that they lie on [0, 1] interval. This is done by `MinMaxScaler` of [scikit-learn](https://scikit-learn.org/). I fit that scaler on training set and save it to `model/scaler.gz` for applying on test set later.
 
 ### Model training
 
