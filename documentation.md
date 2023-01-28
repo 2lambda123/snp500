@@ -85,6 +85,28 @@ From this step, there will be MongoDB usage. Previous steps do not involve datab
 
 The script to connect to MongoDB is in `db_connect.py`. As this project is small, other steps will get database instance from this file and handle logic on its own instead of having complex architecture.
 
+There are 2 collections in our database: `historical-data` and `prediction-2022`.
+
+Example record in `historical-data` collection:
+```
+{
+    "ticker": "A",
+    "historical_data": {
+        "Open": {"2009-01-01": 11.158798217773438,...},
+        "High": ...,
+        ...
+    }
+}
+```
+
+Example record in `prediction-2022` collection:
+```
+{
+    "ticker": "A",
+    "prediction": 171.40100464162526
+}
+```
+
 ## Build an API that return our prediction
 
 This API is implemented using FastAPI. It just retrieves our pre-calculated prediction from database and output it.
